@@ -47,7 +47,7 @@
                                 </state>
                                 <connections>
                                     <action selector="tournament" destination="BYZ-38-t0r" eventType="touchUpInside" id="71l-KT-axH"/>
-                                    <segue destination="q0W-Xr-Mda" kind="show" id="kSP-jZ-l0H"/>
+                                    <segue destination="q0W-Xr-Mda" kind="presentation" id="kSP-jZ-l0H"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,7 +89,6 @@
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Flx-zh-r0V">
                             <connections>
                                 <action selector="back" destination="ugA-fX-9Sb" id="y52-Go-aoQ"/>
-                                <segue destination="BYZ-38-t0r" kind="show" id="e30-Se-VW0"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bGg-PR-5Fl">
@@ -98,6 +97,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="0EB-yl-H26" id="7lI-hj-ULZ"/>
+                        <segue destination="HUe-i6-F73" kind="show" identifier="ViewController" id="J8o-Zi-6wG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWF-qz-iJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,6 +128,9 @@
                                 <state key="normal" title="save">
                                     <color key="titleColor" red="1" green="0.36081725340743287" blue="0.53091136405659123" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveMemo" destination="HUe-i6-F73" eventType="touchUpInside" id="GOf-NW-erI"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="630-6R-V2D">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -137,6 +143,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6k0-au-Wgy"/>
                     </view>
+                    <connections>
+                        <outlet property="titleTextField" destination="JTR-Fg-rUu" id="2eY-m9-ES2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOT-AI-uTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,4 +170,7 @@
             <point key="canvasLocation" x="42" y="-96"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="J8o-Zi-6wG"/>
+    </inferredMetricsTieBreakers>
 </document>
